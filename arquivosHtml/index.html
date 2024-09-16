@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Characters | Eduardo Soriano</title>
+    <link rel="stylesheet" href="/arquivosCss/style.css">
+    <link rel="shortcut icon" href="assets/millennium-falcon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <a href="/arquivosHtml/index.html">
+            <div class="logo">
+                <img src="/assets/star-wars-logo.png" alt="logo" class="logo-img" />
+            </div>
+        </a>
+
+        <div class="navigation">
+
+            <a class="text-header" href="/arquivosHtml/planetas.html">Planetas</a>
+
+            <a class="text-header" href="/arquivosHtml/starships.html">Starships</a>
+
+            <a class="text-header" href="/arquivosHtml/personagens.html">Personagens</a>
+
+            <a class="text-header" href="/arquivosHtml/curiosidades.html">Curiosidades</a>
+        </div>   
+        
+        <div class="social-media">
+            <a href="https://www.instagram.com/eduard0_nsc/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=100003165791899" target="_blank">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="https://github.com/Eduardosoriano46" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a>
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>    
+
+        <button onclick="hamburger()" id="btn-menu">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+
+        <div class="menu-mobile" id="menu-mobile">
+
+            <a class="text-header" href="/arquivosHtml/planetas.html">Planetas</a>
+
+            <a class="text-header" href="/arquivosHtml/starships.html">Starships</a>
+
+            <a class="text-header" href="/arquivosHtml/personagens.html">Personagens</a>
+
+            <a class="text-header" href="/arquivosHtml/curiosidades.html">Curiosidades</a>
+
+        <div class="social-mobile">
+            <a href="https://www.instagram.com/eduard0_nsc/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=100003165791899" target="_blank">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="https://github.com/Eduardosoriano46" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a>
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>    
+    </div>
+    </header>
+
+    <h2>Conheca a cronologia de star Wars </h2>
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+            <div class="slide first">
+                <img src="/assets/starwars.jpg" alt="imagem 1">
+            </div>
+
+            <div class="slide">
+                <img src="/assets/personagens.jpg" alt="imagem 3">
+            </div>
+
+            <div class="slide">
+                <img src="/assets/spaceship.jpg" alt="imagem 2">
+            </div>
+
+            <div class="slide">
+                <img src="/assets/planeta.jpg" alt="imagem 4">
+            </div>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="video-container">
+        <h2 class="title">As lutas mais epicas da cronologia de star Wars</h2>
+
+        <div class="content-video">
+            <p>Darth Maul vs. Obi-Wan Kenobi e Qui-Gon Jinn <br>
+                Episodio Um: A Ameaca Fantasma</p>
+            <video controls class="video">
+                <source src="/assets/Qui-Gon Jinn e Obi-Wan Kenobi vs Darth Maul - Dublado [PT-BR] HD 1080p.mp4"
+                    type="video/mp4">
+                Seu navegador não possui suporte para vídeos
+            </video>
+        </div>
+        <button id="button-video">info</button>
+        <div class="info" id="info">
+            <div class="info-content" id="info-content">
+                Uma coisa que quase ninguém discorda é o quão bonita visualmente as lutas de sabre de luz ficaram a partir do Episódio I.<br>
+                 A luta entre Darth Maul contra Obi-Wan e Qui-Gon Jinn é com certeza um espetáculo visual e que acabou marcando pelo sabre de luz duplo de Darth Maul e por sua derrota para Obi-Wan.
+            </div>
+        </div>
+
+        <div class="content-video">
+            <p>Obi-Wan Kenobi vs. Anakin Skywalker<br>
+                Episodio Tres: A Vinganca dos Sith</p>
+            <video controls class="video">
+                <source src="/assets/_Anakin Skywalker vs Obi-Wan Kenobi 2ª Parte - Dublado [PT-BR] HD 1080p.mp4"
+                    type="video/mp4">
+                Seu navegador não possui suporte para vídeos
+            </video>
+        </div>
+        <button id="button-video1">info</button>
+        <div class="info1" id="info1">
+            <div class="info-content1" id="info-content1">
+                A luta com um dos cenários mais impactantes visualmente falando.<br>
+                E que também seu tornou muito marcante pelo fato de Obi-Wan derrotar Anakin, tendo que lhe cortar
+                os seus membros.
+                 Foi a luta que transformou definitivamente Anakin no grande vilão Darth Vader.
+            </div>
+        </div>
+
+        <div class="content-video">
+            <p>Luke Skywalker vs. Darth Vader<br>
+                Episodio Cinco: o imperio Contra-Ataca</p>
+            <video controls class="video">
+                <source
+                    src="/assets/_Luke Skywalker vs Darth Vader (Episódio V) 2ª Parte - Dublado [PT-BR] HD 1080p.mp4"
+                    type="video/mp4">
+                Seu navegador não possui suporte para vídeos
+            </video>
+        </div>
+        <button id="button-video2">info</button>
+        <div class="info2" id="info2">
+            <div class="info-content2" id="info-content2">
+                Além de ser uma grande luta, a batalha traz um peso dramático muito grande, com a revelação de que Darth Vader é o pai de Luke Skywalker.<br>
+                Foi a cena também onde Luke perdeu uma de suas mãos e também o seu icônico sabre de luz azul, sendo substituído no filme seguinte pelo também clássico sabre verde.
+            </div>
+        </div>
+
+        <div class="content-video">
+            <p>Darth Maul vs. Obi-Wan Kenobi e Qui-Gon Jinn <br>
+                Episodio I: A Ameaca Fantasma</p>
+            <video controls class="video">
+                <source src="/assets/STAR WARS 8 Rey e Kylo Ren vs Snoke Dublado HD Cena Final Épica (1).mp4"
+                    type="video/mp4">
+                Seu navegador não possui suporte para vídeos
+            </video>
+        </div>
+        <button id="button-video3">info</button>
+        <div class="info3" id="info3">
+            <div class="info-content3" id="info-content3">
+                Quando Kylo Ren decide matar o Líder Supremo Snoke, os seus guardas resolvem atacar Kylo, para vingar a sua morte.<br>
+                Rey se junta a Kylo, em uma das batalhas com um visual mais chamativo de toda a franquia,
+                 Tanto pelo cenário pegando fogo, quanto pela beleza das armaduras usadas pelos Guardas Pretorianos.
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-logo">Star Wars</div>
+        <div class="copyrigth">Desenvolvido por &copy; Eduardo Soriano</div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/3666a66dc0.js" crossorigin="anonymous"></script>
+    <script src="/arquivosJs/index.js"></script>
+</body>
+
+</html>

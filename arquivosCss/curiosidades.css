@@ -1,0 +1,363 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    color: #fff;    
+}
+
+body {
+    background-image: url(/assets/universo-bg.jpg);
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;   
+}
+
+.navigation {
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.text-header {
+    font-family: 'Star Wars', sans-serif;
+    transition: 0.4s;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.text-header:hover {
+    color: gold;
+}
+
+.logo {
+    width: 250px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    
+}
+
+.logo-img {
+    width: 40%;
+    height: auto;
+}
+
+.logo-text {
+    font-family: 'star wars', sans-serif;
+    font-size: 1rem;
+}
+
+.social-media {
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+}
+
+i {
+    font-size: 1.2rem;
+    transition: 0.4s;
+}
+
+i:hover {
+    color: gold;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 60px;
+}
+
+h2 {
+    margin-top: 80px;
+    font-family: 'Star Wars', sans-serif;
+    font-size: 2rem;
+    color: gold;
+}
+
+button {
+    height: 50px;
+    width: 800px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    color: black;
+    background-color: gold;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 10px;
+    border: none;    
+}
+
+button:hover, b:hover {
+    scale: 1.02;
+    background-color: black;
+    color: gold;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    margin: 40px 0 20px 0;
+}
+
+.footer-logo {
+    font-family: 'Star Wars', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.copyrigth {
+    font-weight: 500;
+}
+
+.modal {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+}
+
+.modal-content {
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    height: 40vh;
+    background-color: #0d0d0d;
+    color: gold;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    padding: 20px 10px;
+}
+
+.menu-mobile {
+    display: none;
+}
+
+#btn-menu {
+    display: none;
+}
+
+@media(max-width:480px) {
+    .navigation {
+        display: none;
+    }
+
+    .social-media {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+        position: absolute;
+        background-color: #0d0d0d;
+        top: 75px;
+        right: 0px;
+        height: 0px;
+        width: 100%;
+        z-index: 30;
+        border-radius: 10px;
+        transition: .5s;
+        visibility: hidden;
+        scrollbar-width: none;
+        overflow-y: hidden;
+
+    }
+
+    #menu-mobile.active {
+        visibility: visible;
+        height: 100%;
+        width: 100%;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    #btn-menu {
+        display: block;
+        margin-left: 30px;
+        width: 30px;
+        height: 30px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .line {
+        width: 30px;
+        height: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        position: relative;
+        margin: 8px auto;
+        transform-origin: center;
+        transition: 0.2s;
+    }
+
+    .menu-mobile a, .social-mobile {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 50px 35px;
+    }
+
+    #btn-menu.ativar .line:nth-child(1) {
+        transform: translatey(11px) rotate(-135deg);
+        margin-top: 1;
+    }
+
+    #btn-menu.ativar .line:nth-child(2) {
+        background: none;
+    }
+
+    #btn-menu.ativar .line:nth-child(3) {
+        transform: translatey(-9px) rotate(135deg);
+    }
+
+    .social-media {
+        display: none;
+    }
+
+    .social-mobile {
+        display: flex;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .main-content button {
+        height: auto ;
+        width: 370px;
+    }
+
+    .modal-content {
+        width: 300px;
+        height: auto;
+    }
+}
+
+@media(min-width: 780px) and (max-width: 1100px) {
+    .main-content button {
+        height: 60px;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .social-media {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+        position: absolute;
+        background-color: #0d0d0d;
+        top: 75px;
+        right: 0px;
+        height: 0px;
+        width: 100%;
+        z-index: 30;
+        border-radius: 10px;
+        transition: .5s;
+        visibility: hidden;
+        scrollbar-width: none;
+        overflow-y: hidden;
+
+    }
+
+    #menu-mobile.active {
+        visibility: visible;
+        height: 100%;
+        width: 100%;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    #btn-menu {
+        display: block;
+        margin-left: 30px;
+        width: 30px;
+        height: 30px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .line {
+        width: 30px;
+        height: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        position: relative;
+        margin: 8px auto;
+        transform-origin: center;
+        transition: 0.2s;
+    }
+
+    .menu-mobile a, .social-mobile {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 75px 45px;
+    }
+
+    #btn-menu.ativar .line:nth-child(1) {
+        transform: translatey(11px) rotate(-135deg);
+        margin-top: 1;
+    }
+
+    #btn-menu.ativar .line:nth-child(2) {
+        background: none;
+    }
+
+    #btn-menu.ativar .line:nth-child(3) {
+        transform: translatey(-9px) rotate(135deg);
+    }
+
+    .social-media {
+        display: none;
+    }
+
+    .social-mobile {
+        display: block;
+        display: flex;
+    }
+
+}

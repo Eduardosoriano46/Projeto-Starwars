@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Starships | Eduardo Soriano</title>
+    <link rel="stylesheet" href="/arquivosCss/starships.css">
+    <link rel="shortcut icon" href="/assets/millennium-falcon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <a href="/arquivosHtml/index.html">
+            <div class="logo">
+                <img src="/assets/star-wars-logo.png" alt="logo" class="logo-img" />
+                <span class="logo-text"></span>
+            </div>
+        </a>
+
+        <div class="navigation">
+            <a class="text-header" href="/arquivosHtml/index.html">Home</a>
+
+            <a class="text-header" href="/arquivosHtml/planetas.html">Planetas</a>
+
+            <a class="text-header" href="/arquivosHtml/starships.html">Starships</a>
+
+            <a class="text-header" href="/arquivosHtml/personagens.html">Personagens</a>
+
+            <a class="text-header" href="/arquivosHtml/curiosidades.html">Curiosidades</a>
+
+        </div>
+
+
+        <div class="social-media">
+            <a href="https://www.instagram.com/eduard0_nsc/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=100003165791899" target="_blank">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="https://github.com/Eduardosoriano46" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a>
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+
+        <button onclick="hamburger()" id="btn-menu">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+
+
+        <div class="menu-mobile" id="menu-mobile">
+
+           <a class="text-header" href="/arquivosHtml/index.html">Home</a>
+            
+            <a class="text-header" href="/arquivosHtml/planetas.html">Planetas</a>
+
+            <a class="text-header" href="/arquivosHtml/starships.html">Starships</a>
+
+            <a class="text-header" href="/arquivosHtml/personagens.html">Personagens</a>
+
+            <a class="text-header" href="/arquivosHtml/curiosidades.html">Curiosidades</a>
+
+            <div class="social-mobile">
+                <a href="https://www.instagram.com/eduard0_nsc/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.facebook.com/profile.php?id=100003165791899" target="_blank">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://github.com/Eduardosoriano46" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a>
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="main-container">
+        <h2>Conheca as starships da cronologia</h2>
+
+        <div class="main-content" id="main-content"></div>
+
+        <div class="modal" id="modal" onclick="hideModal()">
+            <div class="modal-content" id="modal-content"></div>
+        </div>
+
+        <div class="buttons">
+            <button id="back-button" disabled>Anterior</button>
+            <button id="next-button" disabled>Proximo</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-logo">Star Wars</div>
+        <div class="copyrigth">Desenvolvido por &copy; Eduardo Soriano </div>
+    </footer>
+    .+
+    <script src="https://kit.fontawesome.com/3666a66dc0.js" crossorigin="anonymous"></script>
+    <script src="/arquivosJs/starships.js"></script>
+</body>
+
+</html>
