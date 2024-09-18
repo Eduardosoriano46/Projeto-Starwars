@@ -1,181 +1,88 @@
-let currentPageUrl = 'https://swapi.dev/api/people/'
+let count = 1;
+document.getElementById("radio1").checked = true
 
-window.onload = async () => {
-    try {
-        await loadCharacters(currentPageUrl)
-    } catch (error) {
-        console.log(error);
-        alert('Erro ao carregar cards');
+setInterval(function () {
+    nextImage();
+}, 4000)
+
+function nextImage() {
+    count++;
+    if (count > 4) {
+        count = 1;
     }
-
-    const nextButton = document.getElementById('next-button')
-    const backButton = document.getElementById('back-button')
-
-    nextButton.addEventListener('click', loadNextPage)
-    backButton.addEventListener('click', loadPreviousPage)
-};
-
-async function loadCharacters(url) {
-    const mainContent = document.getElementById('main-content')
-    mainContent.innerHTML = ''; // Limpa os resultados anteriores 
-
-    try {
-        
-        const response = await fetch(url);
-        const responseJson = await response.json();
-
-        responseJson.results.forEach((character) => {
-            const card = document.createElement("div")
-            card.style.backgroundImage =
-             `url('https://starwars-visualguide.com/assets/img/characters/${character.url.replace(/\D/g, "")}.jpg')`
-            card.className = "cards"
-
-            const characterNameBG = document.createElement('div')
-            characterNameBG.className = "character-name-bg"
-
-            const characterName = document.createElement('span')
-            characterName.className = 'character-name'
-            characterName.innerHTML = `${character.name}`
-
-            characterNameBG.appendChild(characterName)
-            card.appendChild(characterNameBG)
-
-            card.onclick = () => {
-                const modal = document.getElementById("modal")
-                modal.style.visibility = "visible"
-
-                const modalContent = document.getElementById("modal-content")
-                modalContent.innerHTML = ''
-
-                const characterImage = document.createElement("div")
-                characterImage.style.backgroundImage = 
-                `url('https://starwars-visualguide.com/assets/img/characters/${character.url.replace(/\D/g, "")}.jpg')`
-                characterImage.className = "character-image"
-
-                const name = document.createElement("span")
-                name.className = "character-details"
-                name.innerText = `Nome: ${character.name}`
-
-                const characterHeight = document.createElement("span")
-                characterHeight.className = "character-details"
-                characterHeight.innerText = `Altura: ${converctHeight(character.height)}`
-
-
-                const mass = document.createElement("span")
-                mass.className = "character-details"
-                mass.innerText = `Peso: ${converctMass(character.mass)}`
-
-                const eyeColor = document.createElement("span")
-                eyeColor.className = "character-details"
-                eyeColor.innerText = `Cor dos olhos: ${converctEyeColor(character.eye_color)}`
-                
-                const birthYear = document.createElement("span")
-                birthYear.className = "character-details"
-                birthYear.innerText = `Nascimento: ${converctBirthYear(character.birth_year)}`
-
-                modalContent.appendChild(characterImage)
-                modalContent.appendChild(name)
-                modalContent.appendChild(characterHeight)
-                modalContent.appendChild(mass)
-                modalContent.appendChild(eyeColor)
-                modalContent.appendChild(birthYear)
-            }
-
-            mainContent.appendChild(card)
-        });
-
-        const nextButton = document.getElementById('next-button')
-        const backButton = document.getElementById('back-button')
-
-        nextButton.disabled = !responseJson.next;
-        backButton.disabled = !responseJson.previous;
-
-        backButton.style.visibility = responseJson.previous? "visible" : "hidden"
-        nextButton.style.visibility = responseJson.next? "visible" : "hidden"
-
-        currentPageUrl = url
-
-    } catch (error) {
-        alert('Erro ao carregar os personagens')
-        console.log(error)
-    }
+    document.getElementById("radio" + count).checked = true
 }
 
-async function loadNextPage() {
-    if (!currentPageUrl) return;
+function hideInfo() {
+    const info = document.getElementById("info")
+    info.style.visibility = "hidden"
+}
+const info = document.getElementById('info')
 
-    try {
-        const response = await fetch(currentPageUrl)
-        const responseJson = await response.json()
-        
-        await loadCharacters(responseJson.next)
+info.addEventListener('click', hideInfo)
 
-    } catch (error) {
-        console.log(error)
-        alert('Erro ao carregar a próxima página')
-    }
+infoContent = () => {
+    const info = document.getElementById('info')
+    info.style.visibility = "visible"
 }
 
-async function loadPreviousPage() {
-    if (!currentPageUrl) return;
+const buttonVideo = document.getElementById("button-video")
 
-    try {
-        const response = await fetch(currentPageUrl)
-        const responseJson = await response.json()
-        
-        await loadCharacters(responseJson.previous)
-        
-    } catch (error) {
-        console.log(error)
-        alert('Erro ao carregar a página anterior')
-    }
+buttonVideo.addEventListener('click', infoContent)
+
+
+function hideInfo1() {
+    const info1 = document.getElementById("info1")
+    info1.style.visibility = "hidden"
+}
+const info1 = document.getElementById('info1')
+
+info1.addEventListener('click', hideInfo1)
+
+infoContent1 = () => {
+    const info1 = document.getElementById('info1')
+    info1.style.visibility = "visible"
 }
 
-function hideModal() {
-    const modal = document.getElementById('modal')
-    modal.style.visibility = "hidden"
+const buttonVideo1 = document.getElementById("button-video1")
+
+buttonVideo1.addEventListener('click', infoContent1)
+
+
+function hideInfo2() {
+    const info2 = document.getElementById("info2")
+    info2.style.visibility = "hidden"
+}
+const info2 = document.getElementById('info2')
+
+info2.addEventListener('click', hideInfo2)
+
+infoContent2 = () => {
+    const info2 = document.getElementById('info2')
+    info2.style.visibility = "visible"
 }
 
-function converctEyeColor(eyeColor) {
-    const cores = { 
-        blue: "azul",
-        brown: "castanho",
-        green: "verde",
-        yellow: "amarelo",
-        black: "preto",
-        pink: "rosa",
-        red: "vermelho",
-        orange: "laranja",
-        hazel: "avela",
-        unknown: "desconhecida"
-    }
-    return cores[eyeColor.toLowerCase()]  ||  eyeColor;
+const buttonVideo2 = document.getElementById("button-video2")
+
+buttonVideo2.addEventListener('click', infoContent2)
+
+
+function hideInfo3() {
+    const info3 = document.getElementById("info3")
+    info3.style.visibility = "hidden"
+}
+const info3 = document.getElementById('info3')
+
+info3.addEventListener('click', hideInfo3)
+
+infoContent3 = () => {
+    const info3 = document.getElementById('info3')
+    info3.style.visibility = "visible"
 }
 
-function converctHeight(height) {
-    if  (height ===  "unknown") {
-        return "desconhecida"
-    }
+const buttonVideo3 = document.getElementById("button-video3")
 
-    return (height / 100).toFixed(2);x
-}
-
-function converctMass(mass) {
-    if (mass === "unknown") {
-        return "desconhecido"
-    }
-
-    return `${mass} kg`
-}
-
-function converctBirthYear(birthYear) {
-    if (birthYear === "unknown") {
-        return "desconhecido"
-    }
-
-    return birthYear
-}
-
+buttonVideo3.addEventListener('click', infoContent3)
 
 function hamburger() {
     const btnmenu = document.getElementById('btn-menu')
@@ -191,3 +98,7 @@ const menu = document.getElementById('menu-mobile')
 }
 
 btnmenu.addEventListener('click', menuMobile)
+
+
+
+
