@@ -328,7 +328,101 @@ footer {
     }
 }
 
-    @media(min-width: 780px) and (max-width: 1100px) {
+@media (max-width: 680px) {
+	.navigation {
+		display: none;
+	}
+
+	.menu-mobile {
+		display: block;
+		position: absolute;
+		background-color: #0d0d0d;
+		top: 75px;
+		right: 0px;
+		height: 0px;
+		width: 100%;
+		z-index: 30;
+		border-radius: 10px;
+		transition: .5s;
+		visibility: hidden;
+		scrollbar-width: none;
+		overflow-y: hidden;
+
+	}
+
+	#menu-mobile.active {
+		visibility: visible;
+		height: 100%;
+		width: 100%;
+		overflow-x: auto;
+		scrollbar-width: none;
+	}
+
+	#btn-menu {
+		display: block;
+		margin-left: 30px;
+		width: 30px;
+		height: 30px;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+	}
+
+	.line {
+		width: 30px;
+		height: 2px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #fff;
+		position: relative;
+		margin: 8px auto;
+		transform-origin: center;
+		transition: 0.2s;
+	}
+
+	.menu-mobile a, .social-mobile{
+		display: block;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		font-size: 1.5rem;
+		padding: 50px 35px;
+	}
+
+	#btn-menu.ativar .line:nth-child(1) {
+		transform: translatey(11px) rotate(-135deg);
+		margin-top: 1;
+	}
+	#btn-menu.ativar .line:nth-child(2) {
+		background: none;
+	}
+
+	#btn-menu.ativar .line:nth-child(3) {
+		transform: translatey(-9px) rotate(135deg);
+
+	}
+
+	.social-media {
+		display: none;
+	}
+
+	.social-mobile {
+		display: flex;
+	}
+
+	.logo {
+		width: 200px;
+		height: auto;
+	}
+
+	h2 {
+		font-size: 1.4rem;
+	}
+	
+}
+
+    @media(min-width: 760px) and (max-width: 1100px) {
         .navigation {
             display: none;
         }
@@ -416,3 +510,18 @@ footer {
             display: flex;
         }
     }
+
+    @media (orientation: landscape) {
+
+        #menu-mobile.active {
+                height: 100%;
+            }
+        
+            .menu-mobile a, .social-mobile {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                font-size: 1.5rem;
+                padding: 13px;	
+            }
+        }
